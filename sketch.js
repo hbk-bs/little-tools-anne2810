@@ -4,8 +4,10 @@ const colorInput = document.querySelector
 ("input#color");
 console.log(colorInput);
 
-let paintColor="#ff6347";
+let paintColor="#bb1b1d";
 colorInput.value = paintColor;
+
+
 
 function setup() {
     const canvas = createCanvas(500,500);
@@ -28,13 +30,11 @@ function draw(){}
 
 
 function mouseDragged(){
-    fill (paintColor);
-    circle(mouseX, mouseY,10);
+    stroke (paintColor);
+    strokeWeight(4);
     line (pmouseX, pmouseY, mouseX, mouseY);
     for (let i = 0; i<100; i++) {
-        point(
-            mouseX + random (-10,10),
-        mouseY + random (-10,10));
+        
     }
 }
 
