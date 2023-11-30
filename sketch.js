@@ -7,7 +7,7 @@ console.log(colorInput);
 let paintColor="#bb1b1d";
 colorInput.value = paintColor;
 
-
+let g = slider.value();
 
 function setup() {
     const canvas = createCanvas(500,500);
@@ -23,15 +23,20 @@ colorInput.addEventListener("input", () => {
     console.log(colorInput.value);
 })
 
+slider = createSlider(0, 255);
+slider.position (860,100);
+slider.size(400);
+
 }
 
 function draw(){}
 
 
+  
 
 function mouseDragged(){
     stroke (paintColor);
-    strokeWeight(4);
+    strokeweigth(g);
     line (pmouseX, pmouseY, mouseX, mouseY);
     for (let i = 0; i<100; i++) {
         
